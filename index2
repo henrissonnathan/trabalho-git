@@ -1,4 +1,189 @@
 irineu se não sabe nem eu
 sera que um dia eu saberei
 ou serei que nem irineu
-que não sabe nem eu
+ 
+$ git add index
+
+ 
+$ git commit -m "Arquivo index editado"
+[main fb0ef11] Arquivo index editado
+ 1 file changed, 5 insertions(+), 1 deletion(-)
+
+ 
+$ git rm arquivo 3
+fatal: pathspec 'arquivo' did not match any files
+
+ 
+$ git rm arquivo 3
+fatal: pathspec 'arquivo' did not match any files
+
+ 
+$ git rm index
+rm 'index'
+
+ 
+$ git commit -m "Excluindo o arquivo index"
+[main 7260e91] Excluindo o arquivo index
+ 1 file changed, 5 deletions(-)
+ delete mode 100644 index
+
+ 
+$ git push origin master
+error: src refspec master does not match any
+error: failed to push some refs to 'https://github.com/henrissonnathan/trabalho-git.git'
+
+ 
+$ git branch
+* main
+
+ 
+$ git checkout -b braso
+Switched to a new branch 'braso'
+
+$ git add .
+
+$ git commit -m "Adicionado 3 novos arquivo index"
+[braso 3b6a7d4] Adicionado 3 novos arquivo index
+ 3 files changed, 15 insertions(+)
+ create mode 100644 index
+ create mode 100644 index1
+ create mode 100644 index2
+
+$ git add index
+
+$ git commit -m "mudansa do arquivo index2"
+On branch braso
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   index2
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+$ git add index2
+
+$ git commit -m "mudansa do arquivo index2"
+[braso 357b1e1] mudansa do arquivo index2
+ 1 file changed, 1 insertion(+), 3 deletions(-)
+
+$ git rm index1
+rm 'index1'
+
+$ git commit -m "Excluindo arquivo index1"
+[braso 0f25068] Excluindo arquivo index1
+ 1 file changed, 6 deletions(-)
+ delete mode 100644 index1
+
+$ git push origin master
+error: src refspec master does not match any
+error: failed to push some refs to 'https://github.com/henrissonnathan/trabalho-git.git'
+
+$ git add .
+
+$ git commit -m "Envio da brach "
+On branch braso
+nothing to commit, working tree clean
+
+$ git push origin brasso
+error: src refspec brasso does not match any
+error: failed to push some refs to 'https://github.com/henrissonnathan/trabalho-git.git'
+
+$ git push origin main
+Enumerating objects: 12, done.
+Counting objects: 100% (12/12), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (7/7), done.
+Writing objects: 100% (10/10), 853 bytes | 853.00 KiB/s, done.
+Total 10 (delta 2), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (2/2), done.
+To https://github.com/henrissonnathan/trabalho-git.git
+   3d3b5de..7260e91  main -> main
+
+$
+ *  History restored 
+
+
+$ git add .
+
+$ git commit -m "novo brach"
+On branch braso
+Your branch is up to date with 'origin/braso'.
+
+nothing to commit, working tree clean
+
+$ git rm index
+rm 'index'
+
+$ git commit -m "Excluindo um arquivo"
+[braso 80fca66] Excluindo um arquivo
+ 1 file changed, 6 deletions(-)
+ delete mode 100644 index
+
+$ git push origin master
+error: src refspec master does not match any
+error: failed to push some refs to 'https://github.com/henrissonnathan/trabalho-git.git'
+
+$ git push origin main
+Everything up-to-date
+
+$ git checkout -b braso_novo
+Switched to a new branch 'braso_novo'
+
+$ git add .
+
+$ git commit -m "adicionado um brach e aterasão e adisão de arquivos"
+[braso_novo 87ccb97] adicionado um brach e aterasão e adisão de arquivos
+ 2 files changed, 4 insertions(+), 1 deletion(-)
+ create mode 100644 novo_arquivo
+
+$ git push origin nova_branch
+error: src refspec nova_branch does not match any
+error: failed to push some refs to 'https://github.com/henrissonnathan/trabalho-git.git'
+
+$ git push origin braso_novo
+Enumerating objects: 8, done.
+Counting objects: 100% (8/8), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (5/5), done.
+Writing objects: 100% (6/6), 603 bytes | 60.00 KiB/s, done.
+Total 6 (delta 2), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (2/2), completed with 1 local object.
+remote:
+remote: Create a pull request for 'braso_novo' on GitHub by visiting:
+remote:      https://github.com/henrissonnathan/trabalho-git/pull/new/braso_novo
+remote:
+To https://github.com/henrissonnathan/trabalho-git.git
+ * [new branch]      braso_novo -> braso_novo
+
+$ git checkout master
+error: pathspec 'master' did not match any file(s) known to git
+
+$ git checkout main
+Switched to branch 'main'
+Your branch is up to date with 'origin/main'.
+
+ 
+$ git merge braso_novo
+Updating 7260e91..87ccb97
+Fast-forward
+ index2       | 4 ++++
+ novo_arquivo | 0
+ 2 files changed, 4 insertions(+)
+ create mode 100644 index2
+ create mode 100644 novo_arquivo
+
+ 
+$ git status
+On branch main
+Your branch is ahead of 'origin/main' by 5 commits.
+  (use "git push" to publish your local commits)
+
+nothing to commit, working tree clean
+
+ 
+$ git commit -m "jusão doas aruivos da nova_braso para a main"
+On branch main
+Your branch is ahead of 'origin/main' by 5 commits.
+  (use "git push" to publish your local commits)
+
+nothing to commit, working tree clean
